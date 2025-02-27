@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Evaluation of the teacher and student models on the AMI test dataset. Columns (from left to right): embedding model, segmentation model, diarization error rate, false alarms, parameter size of the pipeline as percentage of the original pipeline (\textit{pyannote/embedding} with \textit{pyannote/segmentation}). \newline}
+\label{tab:evaluation}{\scriptsize 
+\begin{tabular}{llccc}
+\toprule
+Embedding model & Segmentation model & DER (\%) & FA (\%) & Size (\%) \\
+\midrule
+teacher & teacher & 43.28 & 3.00 & 100.00 \\
+teacher & student & 44.55 & 9.16 & 79.62 \\
+student & teacher & 64.77 & 3.01 & 51.27 \\
+student & student & 62.81 & 9.16 & 30.88 \\
+\bottomrule
+\end{tabular}
+}\end{table}

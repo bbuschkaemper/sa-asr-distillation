@@ -1,0 +1,77 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\begin{axis}[
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=lightgray204},
+log basis x={10},
+tick align=outside,
+tick pos=left,
+x grid style={darkgray176},
+xlabel={\(\displaystyle \lambda\)},
+xmajorgrids,
+xmin=0.501187233627272, xmax=1995262.31496888,
+xmode=log,
+xtick style={color=black},
+xtick={0.01,0.1,1,10,100,1000,10000,100000,1000000,10000000,100000000},
+xticklabels={
+  \(\displaystyle {10^{-2}}\),
+  \(\displaystyle {10^{-1}}\),
+  \(\displaystyle {10^{0}}\),
+  \(\displaystyle {10^{1}}\),
+  \(\displaystyle {10^{2}}\),
+  \(\displaystyle {10^{3}}\),
+  \(\displaystyle {10^{4}}\),
+  \(\displaystyle {10^{5}}\),
+  \(\displaystyle {10^{6}}\),
+  \(\displaystyle {10^{7}}\),
+  \(\displaystyle {10^{8}}\)
+},
+y grid style={darkgray176},
+ylabel={DER [\%]},
+ymajorgrids,
+ymin=42.2921276308669, ymax=70.3848207356103,
+ytick style={color=black}
+]
+\addplot [semithick, steelblue31119180, mark=*, mark size=3, mark options={solid}]
+table {%
+1 59.506319950951
+5 57.3880737905236
+10 61.1305456868291
+50 63.9190863975418
+100 64.1526907188107
+500 60.4145744750966
+1000 69.1078801399401
+5000 58.036489119017
+10000 57.4835375802673
+50000 54.7103714578408
+100000 57.1277009553154
+500000 57.3255225809575
+1000000 58.7448451500598
+};
+\addlegendentry{Embedding}
+\addplot [semithick, darkorange25512714, mark=*, mark size=3, mark options={solid}]
+table {%
+1 46.0885931908497
+5 46.3530718400088
+10 44.294578071722
+50 44.0481686711781
+100 46.3004207059187
+500 43.569068226537
+1000 45.2386266112286
+5000 44.9500618009611
+10000 47.1580422443702
+50000 46.8568743240726
+100000 45.5270530836446
+500000 46.1810517042231
+1000000 47.4183554011192
+};
+\addlegendentry{Segmentation}
+\end{axis}
+
+\end{tikzpicture}
